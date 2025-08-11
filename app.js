@@ -41,9 +41,16 @@ function mostraramigo(){
 
 }
 
-
 function sortearAmigo(){
     if (amigos.length === 0) {
     return;
 }
+
+    let amigoAleatorio = Math.floor(Math.random() * amigos.length);
+
+    //  Obtener el nombre sorteado
+    let amigoSorteado = amigos[amigoAleatorio];
+
+    //  Mostrar el resultado en el elemento HTML
+    document.getElementById("resultado").innerHTML = "Amigo sorteado: " + amigoSorteado;
 }
